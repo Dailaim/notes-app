@@ -1,3 +1,11 @@
+/**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 
 /**
@@ -7,17 +15,34 @@
  * the styles in here will be applied to the Document, without any sort of CSS scoping.
  *
  */
-html {
-  -webkit-text-size-adjust: 100%;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+ body {
+  background-color: white;
+  background-image: url('/data.svg');
+  background-repeat: repeat;
 }
 
-body {
-  padding: 0;
-  line-height: inherit;
+::-webkit-scrollbar {
+  width: 6px;  /* Ancho de la barra de desplazamiento */
+  margin: 0px 3px;
 }
+
+/* Estilo del "track" o riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: transparent; /* Hacemos el fondo del riel transparente */
+  padding: 10px;
+}
+
+/* Estilo del "thumb" o control deslizante de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Un color gris oscuro para el control deslizante, minimalista pero aún visible */
+  border-radius: 4px; /* Suaviza las esquinas del control deslizante para un aspecto más pulido */
+}
+
+/* Estilo del "thumb" al pasar el mouse sobre él */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Oscurece un poco el control deslizante al pasar el mouse sobre él para indicar interactividad */
+}
+
+
