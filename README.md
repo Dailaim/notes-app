@@ -1,65 +1,68 @@
-# Qwik City App ⚡️
+# Sticky Board
 
-- [Qwik Docs](https://qwik.builder.io/)
-- [Discord](https://qwik.builder.io/chat)
-- [Qwik GitHub](https://github.com/BuilderIO/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+Sticky Board es una aplicación interactiva que permite a los usuarios crear, mover y editar notas adhesivas de colores en la pantalla. Es similar a un tablero de corcho físico, pero virtual y más dinámico.
 
----
+El tablero permite a los usuarios:
 
-## Project Structure
+- Crear nuevas notas adhesivas (stickies) en la ubicación de su elección en la pantalla.
+- Mover las notas adhesivas arrastrándolas a la ubicación deseada.
+- Editar el contenido de las notas adhesivas.
+- Cambiar el estado arrastrable de las notas adhesivas.
+- Borrar las notas adhesivas del tablero.
+- Las notas adhesivas persisten incluso después de que la página se haya recargado.
 
-This project is using Qwik with [QwikCity](https://qwik.builder.io/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+## Tecnologías utilizadas
 
-Inside your project, you'll see the following directory structure:
+- Qwik: Un marco de trabajo centrado en la velocidad que se centra en ofrecer la máxima velocidad de interacción del usuario.
+- TypeScript: Un lenguaje de programación de código abierto que se basa en JavaScript, una de las herramientas más utilizadas del mundo, al agregar definiciones de tipo estáticas.
+- CSS: Lenguaje de hojas de estilo en cascada para describir el aspecto o el formato de un documento escrito en HTML.
+- SurrealDB: Una base de datos en tiempo real y sin servidor.
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
+## Prerrequisitos
 
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.builder.io/qwikcity/routing/overview/) for more info.
+Antes de comenzar, asegúrate de tener instalado SurrealDB en tu sistema. Puedes encontrar la guía de instalación en la [página oficial de SurrealDB](https://surrealdb.com).
 
-- `src/components`: Recommended directory for components.
+## Cómo instalar
 
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
+Para instalar esta aplicación, primero debes clonar el repositorio desde GitHub utilizando el siguiente comando:
 
-## Add Integrations and deployment
-
-Use the `pnpm qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.builder.io/qwikcity/guides/static-site-generation/).
-
-```shell
-pnpm qwik add # or `yarn qwik add`
+```bash
+git clone <url del repositorio>
 ```
 
-## Development
+A continuación, instala las dependencias necesarias con el comando:
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
-
-```shell
-npm start # or `yarn start`
+```bash
+pnpm install
 ```
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+## Modo de desarrollo
 
-## Preview
+Para iniciar la aplicación en modo de desarrollo, necesitas ejecutar dos comandos en paralelo:
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
-
-```shell
-pnpm preview # or `yarn preview`
+```bash
+pnpm dev:surreal
+pnpm dev
 ```
 
-## Production
+## Previsualización
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
+Si deseas previsualizar la aplicación, puedes usar el siguiente comando:
 
-```shell
-pnpm build # or `yarn build`
+```bash
+pnpm preview
 ```
+
+## Uso
+
+Para usar la aplicación, simplemente haz clic en el signo + de uno de los colores disponibles para crear una nueva nota adhesiva. Para mover la nota, haz clic y arrastra a la ubicación deseada. Puedes editar el contenido de la nota adhesiva haciendo clic en el texto y escribiendo. Para borrar una nota, simplemente haz clic en el icono de la papelera.
+
+Para cambiar el estado arrastrable de una nota adhesiva, haz clic en el icono "🔥" para desactivarlo (se convertirá en "📛") y haz clic de nuevo para reactivarlo.
+
+## Contribuir
+
+Las contribuciones son siempre bienvenidas. Por favor, vea el documento de contribución para obtener más información.
+
+## Licencia
+
+[MIT](https://choosealicense.com/licenses/mit/)
