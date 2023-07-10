@@ -130,11 +130,12 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-	title: "Welcome to Qwik",
+	title: "Sticky Board - Notas adhesivas interactivas",
 	meta: [
 		{
 			name: "description",
-			content: "Qwik site description",
+			content:
+				"Sticky Board es una aplicación que permite a los usuarios crear, mover y editar notas adhesivas de colores en la pantalla. Una solución perfecta para anotaciones rápidas y organización de tareas.",
 		},
 	],
 };
