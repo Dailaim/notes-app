@@ -43,7 +43,7 @@ export const Sticker = component$<
 		<div
 			class={[
 				colors[card.color ?? "#696CA3"],
-				"flex flex-col justify-center items-center  m-1 rounded rounded-lg text-white relative  ",
+				"flex flex-col justify-center items-center  m-1 rounded-lg text-white relative  ",
 				" min-w-[100px]",
 			]}
 			{...props}
